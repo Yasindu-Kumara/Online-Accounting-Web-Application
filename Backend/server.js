@@ -8,6 +8,11 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
+//routes
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
 //connect to mongoDB
 mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
